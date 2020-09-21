@@ -6,9 +6,9 @@
 
 ### Rodando
 
-1. Clone o projeto: `https://github.com/leonardohenrique/tokio-test.git`
-1. Entre na pasta `tokio-test` e execute: `mvn spring-boot:run`
-1. Acesse: `http://localhost:8080/clientes`
+1. Clone o projeto: `https://github.com/Ronaldop12/toquio-test`
+2. Entre na pasta `tokio-test` e execute: `mvn spring-boot:run`
+3. Acesse: `http://localhost:8080/clientes`
 
 
 
