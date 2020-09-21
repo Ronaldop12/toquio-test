@@ -1,5 +1,4 @@
-# Crud rest com spring boot, angular e spring security
-
+# Crud rest com spring boot
 ### Requisitos
 
 1. JDK 8
