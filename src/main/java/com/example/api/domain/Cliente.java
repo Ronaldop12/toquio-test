@@ -16,10 +16,8 @@ import javax.validation.constraints.NotEmpty;
 
 import org.hibernate.validator.constraints.Length;
 
-
-
 @Entity
-public class Customer implements Serializable {
+public class Cliente implements Serializable {
 	static final long serialVersionUID = 1L;
 	
 	@Id
@@ -39,11 +37,11 @@ public class Customer implements Serializable {
 	@OneToMany(mappedBy="customer", cascade=CascadeType.ALL)
 	private List<Endereco> enderecos = new ArrayList<>();
 	
-	public Customer() {
+	public Cliente() {
 		
 	}
 			
-	public Customer(Long id, String name,  String email) {
+	public Cliente(Long id, String name,  String email) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -98,7 +96,7 @@ public class Customer implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Customer other = (Customer) obj;
+		Cliente other = (Cliente) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;

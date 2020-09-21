@@ -14,7 +14,7 @@ import com.example.api.domain.Cidade;
 public interface CidadeRepository extends JpaRepository<Cidade, Long> {
 
 	@Transactional(readOnly=true)
-	@Query("SELECT customer FROM Cidade customer WHERE customer.estado.id = :estadoId ORDER BY customer.nome")
+	@Query("SELECT cliente FROM Cidade cliente WHERE cliente.estado.id = :estadoId ORDER BY cliente.nome")
 	public List<Cidade> findCidades(@Param("estadoId") Integer estado_id);
 }
 

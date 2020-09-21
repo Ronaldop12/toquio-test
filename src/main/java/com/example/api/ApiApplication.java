@@ -8,11 +8,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.api.domain.Cidade;
-import com.example.api.domain.Customer;
+import com.example.api.domain.Cliente;
 import com.example.api.domain.Endereco;
 import com.example.api.domain.Estado;
 import com.example.api.repository.CidadeRepository;
-import com.example.api.repository.CustomerRepository;
+import com.example.api.repository.ClienteRepository;
 import com.example.api.repository.EnderecoRepository;
 import com.example.api.repository.EstadoRepository;
 
@@ -20,7 +20,7 @@ import com.example.api.repository.EstadoRepository;
 public class ApiApplication implements CommandLineRunner {
 	
 	@Autowired
-	private CustomerRepository repository;
+	private ClienteRepository repository;
 	
 	@Autowired
 	private EstadoRepository estadoRepository;
@@ -38,9 +38,9 @@ public class ApiApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Customer cl = new Customer(null, "Ronaldo", "ronaldo@gmail.com");
-		Customer cl1 = new Customer(null, "Mariazinha","mariazinha@email.com");
-		Customer cl2 = new Customer(null, "Joãozinho","joaozinho@email.com");
+		Cliente cl = new Cliente(null, "Ronaldo", "ronaldo@gmail.com");
+		Cliente cl1 = new Cliente(null, "Mariazinha","mariazinha@email.com");
+		Cliente cl2 = new Cliente(null, "Joãozinho","joaozinho@email.com");
 		repository.saveAll(Arrays.asList(cl,cl1,cl2));
 		
 		Estado est1 = new Estado (null, "Minas Gerais");
@@ -56,7 +56,7 @@ public class ApiApplication implements CommandLineRunner {
 		estadoRepository.saveAll(Arrays.asList(est1, est2));
 		cidadeRepository.saveAll(Arrays.asList(c1, c2, c3));
 		
-		Customer cus = new Customer(null, "Ronaldo Pereira de Lima", "ronaldo.carpeiem12@gmail.com");
+		Cliente cus = new Cliente(null, "Ronaldo Pereira de Lima", "ronaldo.carpeiem12@gmail.com");
 
 		Endereco e1 = new Endereco(null, "Rua Flores", "300", "Apto 303", "Jardim", "38220834", cus, c1);
 		Endereco e2 = new Endereco(null, "Avenida Matos", "105", "Sala 800", "Centro", "38777012", cus, c2);

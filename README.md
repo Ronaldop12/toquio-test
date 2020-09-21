@@ -1,4 +1,4 @@
-# Custumer Service
+# Crud rest com spring boot, angular e spring security
 
 ### Requisitos
 
@@ -9,7 +9,7 @@
 
 1. Clone o projeto: `https://github.com/leonardohenrique/tokio-test.git`
 1. Entre na pasta `tokio-test` e execute: `mvn spring-boot:run`
-1. Acesse: `http://localhost:8080/customers`
+1. Acesse: `http://localhost:8080/clientes`
 
 
 
